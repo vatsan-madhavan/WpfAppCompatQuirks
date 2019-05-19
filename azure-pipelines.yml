@@ -15,11 +15,9 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
--task: DotNetCoreInstaller@0
+- task: DotNetCoreInstaller@0
   inputs:
-  version: '3.0.100-preview6-012012'
-
-- task: NuGetToolInstaller@0
+    version: '3.0.100-preview6-012012'
 
 - task: NuGetCommand@2
   inputs:
