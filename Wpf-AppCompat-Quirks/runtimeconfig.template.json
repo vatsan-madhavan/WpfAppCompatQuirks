@@ -1,0 +1,8 @@
+// runtimeconfig.template.json replaces App.Config based AppContext configuration
+{
+  "configProperties": {
+    "System.GC.Server": true,
+    "Switch.System.Windows.DoNotUsePresentationDpiCapabilityTier2OrGreater": "false",
+    "Switch.System.Windows.DoNotScaleForDpiChanges": "false"
+  }
+}
