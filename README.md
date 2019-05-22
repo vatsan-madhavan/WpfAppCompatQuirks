@@ -2,6 +2,6 @@
 
 # WpfAppCompatQuirks
 
-Wpf AppCompat Quirks Sample
+Wpf AppCompat Quirks Sample.
 
 ![](documentation/images/WpfAppCompatQuirks.png)
