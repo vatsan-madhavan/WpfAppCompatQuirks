@@ -9,6 +9,13 @@
         Title="Application Compatibility Switches HOWTO Sample" Height="800" Width="900">
     <ScrollViewer>
         <StackPanel>
+            <Label>
+                <Label.Content>
+                    <TextBlock TextWrapping="Wrap">
+                    See <Run FontWeight="Bold">runtimeconfig.template.json</Run> and <Run FontWeight="Bold">App.config</Run> for a list of supported application compatibility switches, alongwith the respective default values on .NET Core.
+                    </TextBlock>
+                </Label.Content>
+            </Label>
             <DataGrid ItemsSource="{Binding AppContextSwitches}" />
             <DataGrid ItemsSource="{Binding CompatibilityPreferences}" />
         </StackPanel>
