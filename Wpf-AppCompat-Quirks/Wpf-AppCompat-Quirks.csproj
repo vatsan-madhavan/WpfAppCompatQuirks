@@ -6,6 +6,7 @@
     <RootNamespace>Wpf_AppCompat_Quirks</RootNamespace>
     <UseWPF>true</UseWPF>
     <ApplicationManifest>app1.manifest</ApplicationManifest>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
 
 </Project>

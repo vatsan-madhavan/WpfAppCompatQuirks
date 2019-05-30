@@ -1,8 +1,51 @@
 // runtimeconfig.template.json replaces App.Config based AppContext configuration
+// The following AppContext based flags are available for use in WPF Apps, and are initialized with 
+// Default values as shown below
 {
   "configProperties": {
-    "System.GC.Server": true,
-    "Switch.System.Windows.DoNotUsePresentationDpiCapabilityTier2OrGreater": "false",
-    "Switch.System.Windows.DoNotScaleForDpiChanges": "false"
+    /*
+    // BuildTasksAppContextSwitches
+    "Switch.System.Windows.Markup.DoNotUseSha256ForMarkupCompilerChecksumAlgorithm": false,
+
+    // CoreAppContextSwitches
+    "Switch.System.Windows.DoNotScaleForDpiChanges": false,
+    "Switch.System.Windows.Media.ImageSourceConverter.OverrideExceptionWithNullReferenceException": false,
+    "Switch.System.Windows.DoNotUsePresentationDpiCapabilityTier2OrGreater": false,
+    "Switch.System.Windows.Input.Stylus.DisableStylusAndTouchSupport": false,
+    "Switch.System.Windows.Input.Stylus.EnablePointerSupport": false,
+    "Switch.System.Windows.Diagnostics.DisableDiagnostics": false,
+    "Switch.System.Windows.Diagnostics.AllowChangesDuringVisualTreeChanged": false,
+    "Switch.System.Windows.Input.Stylus.DisableImplicitTouchKeyboardInvocation": false,
+    "Switch.System.Windows.Media.ShouldRenderEvenWhenNoDisplayDevicesAreAvailable": false,
+    "Switch.System.Windows.Media.ShouldNotRenderInNonInteractiveWindowStation": false,
+    "Switch.System.Windows.DoNotUsePresentationDpiCapabilityTier3OrGreater": false, // Reserved for future use
+    "Switch.System.Windows.AllowExternalProcessToBlockAccessToTemporaryFiles": false,
+    "Switch.System.Windows.EnableLegacyDangerousClipboardDeserializationMode": false,
+
+    // FrameworkAppContextSwitches
+    "Switch.System.Windows.Controls.Text.UseAdornerForTextboxSelectionRendering": true,
+    "Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness": false,
+    "Switch.System.Windows.Controls.Grid.StarDefinitionsCanExceedAvailableSpace": false,
+    "Switch.System.Windows.Controls.TabControl.SelectionPropertiesCanLagBehindSelectionChangedEvent": false,
+    "Switch.System.Windows.Data.DoNotUseFollowParentWhenBindingToADODataRelation": false,
+    "Switch.System.Windows.Data.Binding.IListIndexerHidesCustomIndexer": false,
+    "Switch.System.Windows.Baml2006.AppendLocalAssemblyVersionForSourceUri": false,
+    "Switch.System.Windows.Controls.KeyboardNavigationFromHyperlinkInItemsControlIsNotRelativeToFocusedElement": false,
+    "Switch.System.Windows.Automation.Peers.ItemAutomationPeerKeepsItsItemAlive": false,
+
+    // BaseAppContextSwitches
+    "Switch.MS.Internal.DoNotUseCulturePreservingDispatcherOperations": false,
+    "Switch.MS.Internal.UseSha1AsDefaultHashAlgorithmForDigitalSignatures": false,
+    "Switch.MS.Internal.DoNotInvokeInWeakEventTableShutdownListener": false,
+    "Switch.MS.Internal.EnableCleanupSchedulingImprovements": false,
+    "Switch.MS.Internal.EnableWeakEventMemoryImprovements": false,
+
+    // AccessibilitySwitches
+    "Switch.UseLegacyAccessibilityFeatures": false,
+    "Switch.UseLegacyAccessibilityFeatures.2": false,
+    "Switch.UseLegacyAccessibilityFeatures.3": false,
+    "Switch.UseLegacyToolTipDisplay": false,
+    "Switch.System.Windows.Controls.ItemsControlDoesNotSupportAutomation": false
+  */
   }
 }

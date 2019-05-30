@@ -6,85 +6,12 @@
         xmlns:local="clr-namespace:Wpf_AppCompat_Quirks"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
-        Title="Application Compatibility Switches HOWTO Sample" Height="450" Width="800">
-    <Window.Resources>
-        <Style TargetType="Label" x:Key="lblHeader">
-            <Setter Property="Background" Value="Gray" />
-            <Setter Property="Foreground" Value="White" />
-            <Setter Property="BorderThickness" Value="1" />
-        </Style>
-        <Style TargetType="Label">
-            <Setter Property="BorderBrush" Value="Black" />
-            <Setter Property="BorderThickness" Value="1" />
-        </Style>
-    </Window.Resources>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition />
-            <RowDefinition Height="30"/>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Label HorizontalContentAlignment="Center" 
-                   FontWeight="Bold"
-                   Style="{StaticResource lblHeader}"
-                   Content="WPF .NET Core AppCompat Quirks Sample" />
-            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" 
-                   Background="White" Foreground="Black" 
-                   FontStyle="Italic"
-                   HorizontalContentAlignment="Center">
-                <Label.Content>
-                    <TextBlock xml:space="preserve" TextWrapping="WrapWithOverflow">
-<Run>runtimeconfig.template.json replaces App.Config based AppContext switch configuration. This no longer supports HKCU/HKLM based registry config in .NET Core</Run>
-                        
-<Run>App.config is still used for WPF's old style configuration switches (BaseCompatibilityPreferences class, for e.g.). This will continue supporting HKCU based registry config in .NET Core</Run>
-                    </TextBlock>
-                </Label.Content>
-            </Label>
-        </Grid>
-        <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="6*"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
+        Title="Application Compatibility Switches HOWTO Sample" Height="800" Width="900">
+    <ScrollViewer>
+        <StackPanel>
+            <DataGrid ItemsSource="{Binding AppContextSwitches}" />
+            <DataGrid ItemsSource="{Binding CompatibilityPreferences}" />
+        </StackPanel>
+    </ScrollViewer>
 
-                <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource lblHeader}">Switch Name</Label>
-                <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource lblHeader}">Source</Label>
-                <Label Grid.Row="0" Grid.Column="2" Style="{StaticResource lblHeader}">Value</Label>
-
-                <Label Grid.Row="1" Grid.Column="0">FrameworkCompatibilityPreferences.ShouldThrowOnCopyOrCutFailure</Label>
-                <Label Grid.Row="1" Grid.Column="1">
-                    <Label.Content>
-                        <TextBlock TextWrapping="WrapWithOverflow" xml:space="preserve"><Run>App.Config
-(via </Run><Run FontStyle="Italic">System.Windows.FrameworkCompabibilityPreferences</Run><Run>)</Run></TextBlock>
-                    </Label.Content>
-                </Label>
-                <Label Grid.Row="1" Grid.Column="2" 
-                   FontWeight="DemiBold"
-                 Content="{Binding Path=ShouldThrowOnCopyOrCutFailure, UpdateSourceTrigger=PropertyChanged}" />
-
-                <Label Grid.Row="2" Grid.Column="0">DoNotScaleForDpiChanges</Label>
-                <Label Grid.Row="2" Grid.Column="1">
-                    <Label.Content>
-                        <TextBlock TextWrapping="WrapWithOverflow" xml:space="preserve"><Run>runtimeconfig.template.json 
-(via </Run><Run FontStyle="Italic">System.AppContext</Run><Run>)</Run></TextBlock>
-                    </Label.Content>
-                </Label>
-                <Label Grid.Row="2" Grid.Column="2" 
-                   FontWeight="DemiBold"
-                   Content="{Binding Path=DoNotScaleForDpiChanges, UpdateSourceTrigger=PropertyChanged}" />
-            </Grid>
-        </Border>
-    </Grid>
 </Window>
