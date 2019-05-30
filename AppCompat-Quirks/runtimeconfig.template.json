@@ -1,3 +1,7 @@
+// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
+// See the LICENSE file in the project root for more information.
+
 // runtimeconfig.template.json replaces App.Config based AppContext configuration
 // The following AppContext based flags are available for use in WPF Apps, and are initialized with 
 // Default values as shown below

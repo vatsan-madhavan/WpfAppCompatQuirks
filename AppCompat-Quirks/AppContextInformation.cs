@@ -1,5 +1,6 @@
-﻿// runtimeconfig.template.json replaces App.Config based AppContext configuration
-// App.config is still used for WPF's old style configuration switches (BaseCompatibilityPreferences class, for e.g.)
+﻿// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
+// See the LICENSE file in the project root for more information.
 
 namespace Wpf_AppCompat_Quirks
 {
