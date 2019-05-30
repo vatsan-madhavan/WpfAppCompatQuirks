@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <RootNamespace>Wpf_AppCompat_Quirks</RootNamespace>
+    <RootNamespace>AppCompat_Quirks</RootNamespace>
     <UseWPF>true</UseWPF>
     <ApplicationManifest>app1.manifest</ApplicationManifest>
     <Platforms>AnyCPU;x86</Platforms>
